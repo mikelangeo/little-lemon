@@ -8,6 +8,12 @@
   pointer-events: none;
 }
 
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -23,6 +29,16 @@
   color: #61dafb;
   align-items: center;
 }
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 
 nav {
   position: fixed;
@@ -58,30 +74,14 @@ color: #EDEFEE;
 
 }
 
-h1 {
-  color: #b89e1e;
-  font-size: 40pt;
-}
 
 h2 {
-  color: #aa9f66;
+  color: #F4CE14;
   font-size: 40pt;
 }
 
 h3 {
-  font-size: 40pt;
-}
-
-h4 {
-  font-size: 30pt;
-}
-
-h5 {
   font-size: 20pt;
-}
-
-h6 {
-  font-size: 10pt;
 }
 
 p {
@@ -123,14 +123,56 @@ footer img {
   height:300px;
 }
 
-form {
+
+
+.reservationForm {
+  background-color: #495e57;
+  border: 3px solid #febb02;
   display: grid;
-  max-width: 200px;
-  gap: 20px;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px 0px;
+  border-radius: 5px;
+  position:absolute;
+  width: 100%;
+  max-width: 1024px;
 }
 
+.makeReservation {
+  background-color: white;
+  border: 3px solid #febb02;
+  background-color: #495e57;
+  border: 3px solid #febb02;
+  padding: 5px 30% 5px 30%;
+}
+
+.chooseAll {
+  display: flex;
+  align-items: center;
+}
+
+.test {
+  display: block;
+  align-items: center;
+}
+
+
+
+@media (max-width: 700px) {
+  header section, footer section {
+    display: grid;
+    grid-auto-flow: row;
+  }
+}
+
+@media (min-width: 701px) {
+footer section {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  display:grid;
+}
 header section {
   grid-template-columns: 1fr 1fr;
   display:grid;
   justify-items: center;
+}
 }
